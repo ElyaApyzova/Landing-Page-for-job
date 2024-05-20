@@ -49,7 +49,7 @@ textarea {
 }
 
 .container {
-  max-width: 1366px;
+  max-width: 1222px;
   margin: 0 auto;
   padding: 0px 20px;
 }
@@ -61,10 +61,10 @@ textarea {
 }
 
 
-.top__inner {
-    padding: 62px 0px 132px;
-}
+
 
 .top__content {
     width: 542px;
+    padding-top: 62px;
+    padding-bottom: 132px;
 }
