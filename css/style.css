@@ -1,3 +1,16 @@
+:root {
+  --title-font: "Merriweather", serif;
+  --text-font : "Golos Text", sans-serif;
+  --main-text-color: "#313131";
+  --text-color: "#1F1F1F";
+  --white-text-color: "#FFFFFF";
+  --red-text-color: "#F54932";
+  --blue-text-color: "#3057A2";
+  --black-color: "#1F1F1F";
+  --red-color: "#F54932";
+}
+
+
 html {
   box-sizing: border-box;
 }
@@ -60,11 +73,15 @@ textarea {
   align-items: center;
 }
 
-
+.top {
+  padding: 62px 0px 132px;
+}
 
 
 .top__content {
     width: 542px;
-    padding-top: 62px;
-    padding-bottom: 132px;
+}
+
+.top__title {
+
 }
