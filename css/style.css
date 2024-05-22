@@ -130,53 +130,62 @@ textarea {
   text-align: center;
 }
 
-
+.background__imgs {
+  position: relative;
+}
 
 .background__path {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 1;
 }
 
 .background__city {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 1;
 }
 
 .background__yellow-circle {
   position: absolute;
   top: 0;
-  right: 0;
-  z-index: 1;
+  left: 673px;
+  opacity: 5;
 }
 
 .background__circle-text {
   position: absolute;
   top: 0;
-  right: 0;
-  z-index: 5;
+  left: 615px;
 }
 
 .background__chess-right {
   position: absolute;
-  right: 0;
+  top: 150px;
+  right: 160px;
+  
 }
 
 .background__chess-left {
   position: absolute;
-  right: 0;
+  top: 270px;
+  right: 530px;
+  
 }
 
 .background__chess-horse {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 330px;
+  z-index: 1000;
 }
 
 
 .background__chess-small {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 18px;
+  right: 45px;
+  z-index: 1000;
 }
