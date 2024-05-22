@@ -59,6 +59,8 @@ textarea {
   position: relative;
   background-image: url(../images/background.png);
   background-size: cover;
+  height: 1920px;
+  height: 700px;
 }
 
 .container {
@@ -128,8 +130,53 @@ textarea {
   text-align: center;
 }
 
-.background__img {
-  position: relative;
+
+
+.background__path {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.background__city {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.background__yellow-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.background__circle-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.background__chess-right {
+  position: absolute;
+  right: 0;
+}
+
+.background__chess-left {
+  position: absolute;
+  right: 0;
+}
+
+.background__chess-horse {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 
+.background__chess-small {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
