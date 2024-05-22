@@ -1,15 +1,14 @@
 :root {
   --title-font: "Merriweather", serif;
-  --text-font : "Golos Text", sans-serif;
+  --text-font: "Golos Text", sans-serif;
   --main-text-color: #313131;
-  --text-color: #1F1F1F;
-  --white-text-color: #FFFFFF;
-  --red-text-color: #F54932;
-  --blue-text-color: #3057A2;
-  --black-color: #1F1F1F;
-  --red-color: #F54932;
+  --text-color: #1f1f1f;
+  --white-text-color: #ffffff;
+  --red-text-color: #f54932;
+  --blue-text-color: #3057a2;
+  --black-color: #1f1f1f;
+  --red-color: #f54932;
 }
-
 
 html {
   box-sizing: border-box;
@@ -58,8 +57,8 @@ textarea {
 
 .wrapper {
   position: relative;
-  content: "";
   background-image: url(../images/background.png);
+  background-size: cover;
 }
 
 .container {
@@ -78,9 +77,8 @@ textarea {
   padding: 62px 0px 132px;
 }
 
-
 .top__content {
-    width: 542px;
+  width: 542px;
 }
 
 .top__title {
@@ -130,7 +128,8 @@ textarea {
   text-align: center;
 }
 
-.background__city {
-  position: absolute;
-  background-image: url("../images/city.png");
+.background__img {
+  position: relative;
 }
+
+
