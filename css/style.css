@@ -192,7 +192,7 @@ textarea {
 }
 
 .list__line {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 2335px;
   height: 60px;
@@ -211,4 +211,31 @@ textarea {
   color: var(--white-text-color);
   margin-left: 12px;
   list-style: initial;
+}
+
+
+
+
+
+.advertisement {
+  padding: 80px 0px 100px;
+}
+
+.advertisement__main {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.advertisement__main-title {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: clamp(20px, 5vw, 36px);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.advertisement__last-title {
+  color: var(--red-text-color);
+  font-weight: 700;
 }
