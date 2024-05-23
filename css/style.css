@@ -60,7 +60,7 @@ textarea {
   background-image: url(../images/background.png);
   background-size: cover;
   height: 1920px;
-  height: 700px;
+  height: 740px;
 }
 
 .container {
@@ -136,14 +136,14 @@ textarea {
 
 .background__path {
   position: absolute;
-  bottom: 0;
+  bottom: 60px;
   right: 0;
   z-index: 1;
 }
 
 .background__city {
   position: absolute;
-  bottom: 0;
+  bottom: 60px;
   right: 0;
   z-index: 1;
 }
@@ -164,29 +164,41 @@ textarea {
 
 .background__chess-right {
   position: absolute;
-  top: 150px;
+  top: 130px;
   right: 160px;
   
 }
 
 .background__chess-left {
   position: absolute;
-  top: 270px;
+  top: 250px;
   right: 530px;
   
 }
 
 .background__chess-horse {
   position: absolute;
-  bottom: 0;
-  right: 330px;
+  bottom: 60px;
+  right: 335px;
   z-index: 1000;
 }
 
 
 .background__chess-small {
   position: absolute;
-  bottom: 18px;
+  bottom: 77px;
   right: 45px;
+  z-index: 1000;
+}
+
+.list__line {
+  position: absolute;
+  bottom: 0;
+  width: 2335px;
+  height: 60px;
+  background: var(--red-color);
+  display: flex;
+  justify-content: start;
+  align-items: center;
   z-index: 1000;
 }
