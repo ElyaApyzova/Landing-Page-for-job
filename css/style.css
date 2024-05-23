@@ -192,7 +192,7 @@ textarea {
 }
 
 .list__line {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 2335px;
   height: 60px;
@@ -200,5 +200,15 @@ textarea {
   display: flex;
   justify-content: start;
   align-items: center;
+  gap: 12px;
   z-index: 1000;
+}
+
+.item__line {
+  font-family: var(--title-font);
+  font-size: clamp(12px, 1.8vw, 22px);
+  font-weight: 400;
+  color: var(--white-text-color);
+  margin-left: 12px;
+  list-style: initial;
 }
