@@ -221,6 +221,12 @@ textarea {
   padding: 80px 0px 100px;
 }
 
+.advertisement__container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
 .advertisement__main {
   display: flex;
   align-items: center;
@@ -238,4 +244,10 @@ textarea {
 .advertisement__last-title {
   color: var(--red-text-color);
   font-weight: 700;
+}
+
+
+.advertisement__box {
+  display: flex;
+  gap: 44px;
 }
