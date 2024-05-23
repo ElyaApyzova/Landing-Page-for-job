@@ -151,14 +151,15 @@ textarea {
 .background__yellow-circle {
   position: absolute;
   top: 0;
-  left: 673px;
+  right: 0px;
+  margin-right: 33px;
   opacity: 5;
 }
 
 .background__circle-text {
   position: absolute;
   top: 0;
-  left: 615px;
+  right: 0px;
 }
 
 .background__chess-right {
