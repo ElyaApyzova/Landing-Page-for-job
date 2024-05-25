@@ -58,6 +58,7 @@ textarea {
 .wrapper {
   position: relative;
   background-image: url(../images/background.png);
+  background-repeat: no-repeat;
   background-size: cover;
   height: 1920px;
   height: 740px;
@@ -246,8 +247,55 @@ textarea {
   font-weight: 700;
 }
 
+.advertisement__main-img {
+  width: 394px;
+}
 
 .advertisement__box {
   display: flex;
   gap: 44px;
+}
+
+.advertisement__box-imgs {
+  position: relative;
+}
+
+.advertisement__background-img {
+  translate: -40deg;
+}
+.advertisement__back-img {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+
+.advertisement__man-img {
+  position: absolute;
+  top: 100px;
+  left: 90px;
+  z-index: 1000;
+}
+
+.advertisement__manback-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.advertisement__note-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.advertisement__horse-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.advertisement__hand-img {
+  position: absolute;
+  
 }
