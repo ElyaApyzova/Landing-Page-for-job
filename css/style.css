@@ -318,3 +318,27 @@ textarea {
   right: 25px;
   z-index: 1000;
 }
+
+.advertisement__content-title {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: clamp(20px, 5vw, 36px);
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 60px;
+}
+
+.advertisement__content-color {
+  font-weight: 700;
+  color: var(--red-text-color);
+}
+
+.advertisement__content-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advertisement__list-item {
+  display: flex;
+  justify-content: space-between;
+}
