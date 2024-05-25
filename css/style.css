@@ -333,12 +333,18 @@ textarea {
   color: var(--red-text-color);
 }
 
-.advertisement__content-list {
+.advertisement__content-container {
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 48px;
 }
 
-.advertisement__list-item {
-  display: flex;
-  justify-content: space-between;
+.advertisement__content-divider {
+  
 }
+
+.advertisement__content-list {
+  display: flex;
+  flex-direction: column;
+  
+}
+
