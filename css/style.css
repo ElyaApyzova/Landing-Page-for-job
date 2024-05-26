@@ -403,15 +403,36 @@ textarea {
 }
 
 .stages__list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
- 
 }
+
+
 
 .stages__item{
   background-image: url(../images/background.png);
   background-color: #E9DED4;
   background-blend-mode: color-burn;
   padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  width: 394px;
+}
+
+.stages__item-products {
+  padding-bottom: 60px;
+}
+
+.stages__item-plane {
+  padding-right: 270px;
+}
+
+.stages__number {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  align-self: center;
 }
