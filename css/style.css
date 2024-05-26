@@ -406,11 +406,12 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+ 
+}
+
+.stages__item{
   background-image: url(../images/background.png);
   background-color: #E9DED4;
   background-blend-mode: color-burn;
-}
-
-.stages__items{
-  
+  padding: 20px;
 }
