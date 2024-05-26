@@ -381,10 +381,7 @@ textarea {
   padding: 100px 0px;
 }
 
-.stages__content {
-  display: flex;
-  flex-direction: column-reverse
-}
+
 
 .stages__title {
   width: clamp(400px, 100%, 806px);
@@ -394,12 +391,26 @@ textarea {
   color: var(--main-text-color);
   text-transform: uppercase;
   line-height: 1.2;
+  margin-bottom: 54px;
 }
 
 .stages__text {
-  width: clamp(150px, 100%, 250px);
   font-size: clamp(12px, 1.2vw, 20px);
   color: var(--blue-text-color);
   text-transform: capitalize;
   line-height: 1.2;
+  align-self: center;
+}
+
+.stages__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-image: url(../images/background.png);
+  background-color: #E9DED4;
+  background-blend-mode: color-burn;
+}
+
+.stages__items{
+  
 }
