@@ -381,10 +381,11 @@ textarea {
   padding: 100px 0px;
 }
 
-
+.stages__content {
+  width: clamp(400px, 100%, 806px);
+}
 
 .stages__title {
-  width: clamp(400px, 100%, 806px);
   font-family: var(--title-font);
   font-weight: 400;
   font-size: clamp(20px, 4vw, 54px);
@@ -414,24 +415,24 @@ textarea {
 
 
 
-.stages__item:nth-child(1) { grid-area: item1; width: 394px; height: 112px; }
-.stages__item:nth-child(2) { grid-area: item2; width: 394px; height: 112px; }
-.stages__item:nth-child(3) { grid-area: item3; width: 394px; height: 244px; }
-.stages__item:nth-child(4) { grid-area: item4; width: 394px; height: 112px; }
-.stages__item:nth-child(5) { grid-area: item5; width: 394px; height: 112px; }
-.stages__item:nth-child(6) { grid-area: item6; width: 394px; height: 136px; }
-.stages__item:nth-child(7) { grid-area: item7; width: 808px; height: 136px; padding-right: 270px; }
+.stages__item:nth-child(1) { grid-area: item1; width: clamp(200px, 100%,394px); height: 112px; }
+.stages__item:nth-child(2) { grid-area: item2; width: clamp(200px, 100%,394px); height: 112px; }
+.stages__item:nth-child(3) { grid-area: item3; width: clamp(200px, 100%,394px); height: 244px; }
+.stages__item:nth-child(4) { grid-area: item4; width: clamp(200px, 100%,394px); height: 112px; }
+.stages__item:nth-child(5) { grid-area: item5; width: clamp(200px, 100%,394px); height: 112px; }
+.stages__item:nth-child(6) { grid-area: item6; width: clamp(200px, 100%,394px); height: 136px; }
+.stages__item:nth-child(7) { grid-area: item7; width: clamp(200px, 100%,808px); height: 136px; padding-right: 270px; }
 
 
 .stages__item {
-  background-image: url(../images/background.png);
+  position: relative;
+  background-image: url(../images/background.png), url(../images/stamp.png);
   background-color: #E9DED4;
   background-blend-mode: color-burn;
   padding: 20px;
   display: flex;
-  gap: 36px;
-  align-items: stretch;
-  height: auto; 
+  gap: 16px;
+  align-items: stretch; 
 }
 
 .stages__box-number {
@@ -452,6 +453,16 @@ textarea {
 .stages__description {
   color: var(--main-text-color);
   font-weight: 500;
-  font-size: clamp(12px, 1.3vw, 20px);
+  font-size: clamp(12px, 1.4vw, 20px);
   line-height: 24px;
+}
+
+.stages__container{
+  position: absolute;
+  right: 0;
+  bottom: -302%;
+}
+
+.stages__container-img {
+  width: clamp(150px, 100%, 377px);
 }
