@@ -466,3 +466,18 @@ textarea {
 .stages__container-img {
   width: clamp(150px, 100%, 377px);
 }
+
+
+
+
+
+.participants {
+  padding: 100px 0px;
+}
+
+.participants__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
