@@ -200,10 +200,8 @@ textarea {
 }
 
 .list__line {
-  position: absolute;
-  bottom: -60px;
   width: clamp(500px, 100%, 2335px);
-  height: 60px;
+  padding: 18px 12px;
   background: var(--red-color);
   display: flex;
   justify-content: start;
@@ -214,11 +212,12 @@ textarea {
 
 .item__line {
   font-family: var(--title-font);
-  font-size: clamp(10px, 1.05vw, 22px);
+  font-size: clamp(16px, 1.3vw, 22px);
   font-weight: 400;
   color: var(--white-text-color);
   margin-left: 12px;
   list-style: initial;
+  text-transform: uppercase;
 }
 
 
@@ -560,3 +559,44 @@ textarea {
   line-height: 19px;
   color: var(--blue-text-color);
 }
+
+.top__footer {
+  padding-top: 40px;
+}
+
+.footer__line {
+  bottom: -60px;
+  width: clamp(500px, 100%, 2335px);
+  padding: 18px 12px;
+  background: var(--red-color);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.footer__line-item {
+  font-family: var(--title-font);
+  font-size: clamp(16px, 1.3vw, 22px);
+  font-weight: 400;
+  color: var(--white-text-color);
+  margin-left: 12px;
+  list-style: initial;
+  text-transform: uppercase;
+}
+
+
+
+.footer {
+  padding: 40px 0px 72px;
+  background: #E9DED4;
+}
+
+.footer__container-description {
+  font-size: clamp(12px, 1.1vw, 16px);
+  line-height: 19px;
+  color: var(--main-text-color);
+}
+
+
