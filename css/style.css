@@ -481,3 +481,30 @@ textarea {
   align-items: center;
 }
 
+.participants__container-title {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: clamp(30px, 3vw, 54px);
+  color: var(--main-text-color);
+  line-height: 64px;
+  text-transform: uppercase;
+}
+
+.participants__arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+
+.participants__arrows-btn {
+  width: 44px;
+  height: 44px;
+}
+
+.participants__numbers {
+  font-size: clamp(12px, 1.2vw, 16px);
+  color: var(--main-text-color);
+  line-height: 19px;
+}
