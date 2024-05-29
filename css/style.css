@@ -196,34 +196,35 @@ textarea {
   right: 335px;
   z-index: 1000;
 } */
-
-
-.background__chess-small {
+.chess__container {
   position: absolute;
-  bottom: 19px;
+  bottom: 13px;
   right: -27px;
   z-index: 1000;
 }
 
+.background__chess-small {
+  width: 82px;
+}
+
 .list__line {
-  width: clamp(500px, 100%, 2335px);
-  padding: 18px 12px;
+  width: clamp(1727px, 100%, 2335px);
+  padding: 18px 0px;
   background: var(--red-color);
   display: flex;
-  justify-content: start;
   align-items: center;
   gap: 12px;
-  z-index: 1000;
+  overflow-x: hidden;
 }
 
 .item__line {
   font-family: var(--title-font);
-  font-size: clamp(16px, 1.3vw, 22px);
+  font-size: clamp(16px, 1.2vw, 22px);
   font-weight: 400;
   color: var(--white-text-color);
-  margin-left: 12px;
   list-style: initial;
   text-transform: uppercase;
+  margin-left: 12px;
 }
 
 
