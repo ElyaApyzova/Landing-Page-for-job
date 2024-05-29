@@ -266,7 +266,7 @@ textarea {
 .advertisement__box {
  display: flex;
  justify-content: space-between;
- gap: 17px;
+ gap: 44px;
 }
 
 
@@ -334,6 +334,27 @@ textarea {
   font-weight: 700;
   color: var(--red-text-color);
 }
+
+.advertisement__list {
+  width: clamp(335px, 100%, 704px);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 48px;
+  
+}
+
+.advertisement__list-item {
+  
+}
+
+.advertisement__item-description {
+  border-bottom: 2px solid #D0D0D0;
+}
+
+
+
+
 
 
 
