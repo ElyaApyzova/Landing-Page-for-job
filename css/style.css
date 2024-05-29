@@ -339,17 +339,39 @@ textarea {
   width: clamp(335px, 100%, 704px);
   display: flex;
   align-items: center;
-  gap: 32px;
   margin-bottom: 48px;
   
 }
 
-.advertisement__list-item {
-  
-}
 
 .advertisement__item-description {
+  padding: 14px 16px 14px 0px;
+  font-size: 20px;
+  color: var(--main-text-color);
+}
+
+.advertisement__item-description:not(:last-child) {
   border-bottom: 2px solid #D0D0D0;
+} 
+
+.advertisement__divider-mg {
+  width: 248px;
+}
+
+.advertisement__item-text {
+  padding: 14px 16px;
+  width: 350px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--main-text-color); 
+}
+
+.advertisement__item-text:not(:last-child) {
+  border-bottom: 2px solid #D0D0D0;
+} 
+
+.advertisement__item-price {
+  
 }
 
 
