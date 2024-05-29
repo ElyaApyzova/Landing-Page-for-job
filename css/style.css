@@ -37,6 +37,7 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 button {
@@ -60,7 +61,7 @@ textarea {
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: clamp(500px, 100%, 1920px);
+  width: clamp(900px, 100%, 1920px);
   background-color: #E9DED4;
   background-blend-mode: color-burn;
 }
@@ -78,20 +79,25 @@ textarea {
   align-items: center;
 }
 
+.header__logo-img {
+  width: clamp(213px, 100%,245px);
+}
+
 .top {
   padding: 62px 0px 132px;
 }
 
 .top__content {
-  width: 542px;
+  width: clamp(335px, 100%,542px);
 }
 
 .top__title {
   font-family: var(--title-font);
-  font-size: clamp(20px, 5vw, 60px);
+  font-size: clamp(36px, 5vw, 60px);
   font-weight: 400;
   color: var(--main-text-color);
   line-height: 66px;
+  margin-bottom: 24px;
 }
 
 .top__capital {
@@ -100,13 +106,13 @@ textarea {
 
 .top__world {
   padding-left: 30px;
-  margin-bottom: 24px;
 }
 
 .top__description {
-  font-size: clamp(12px, 1.5, 18px);
+  font-size: 18px;
   color: var(--main-text-color);
   text-align: center;
+  line-height: 23px;
 }
 
 .top__btns {
@@ -120,7 +126,7 @@ textarea {
   background: var(--black-color);
   border-radius: 66px;
   color: var(--white-text-color);
-  font-size: clamp(12px, 1.5vw, 16px);
+  font-size: 16px;
   font-weight: 500;
   text-align: center;
   line-height: 20px;
@@ -130,7 +136,7 @@ textarea {
   padding: 20px 49px;
   border: 2px solid var(--black-color);
   border-radius: 66px;
-  font-size: clamp(12px, 1.5vw, 16px);
+  font-size: 16px;
   font-weight: 500;
   text-align: center;
   line-height: 20px;
@@ -194,8 +200,8 @@ textarea {
 
 .background__chess-small {
   position: absolute;
-  bottom: 18px;
-  right: 60px;
+  bottom: 19px;
+  right: -27px;
   z-index: 1000;
 }
 
