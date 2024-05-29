@@ -266,7 +266,7 @@ textarea {
 .advertisement__box {
  display: flex;
  justify-content: space-between;
- gap: 44px;
+ gap: 17px;
 }
 
 
@@ -371,7 +371,15 @@ textarea {
 } 
 
 .advertisement__item-price {
-  
+  text-decoration: line-through;
+  margin-right: 12px;
+  text-emphasis-color: inherit;
+  text-decoration-color: var(--red-text-color);
+}
+
+.advertisement__item-info {
+  font-size: clamp(18px, 1.2vw, 20px);
+  color: var(--blue-text-color);
 }
 
 
