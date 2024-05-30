@@ -401,7 +401,7 @@ textarea {
 .stages__title {
   font-family: var(--title-font);
   font-weight: 400;
-  font-size: clamp(36px, 3.2vw, 54px);
+  font-size: clamp(36px, 3.8vw, 54px);
   color: var(--main-text-color);
   text-transform: uppercase;
   line-height: 64px;
@@ -411,10 +411,10 @@ textarea {
 .stages__text {
   display: inline-block; 
   width: 280px;
-  line-height: normal;
+ line-height: normal;
   font-size: clamp(18px, 1.2vw, 20px);
   color: var(--blue-text-color);
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .stages__list {
