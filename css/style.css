@@ -98,31 +98,28 @@ textarea {
   color: var(--main-text-color);
   line-height: 66px;
   margin-bottom: 24px;
+  text-transform: uppercase;
 }
 
 .top__capital {
   padding-left: 91px;
 }
 
-.top__world {
-  padding-left: 30px;
-}
+
 
 .top__description {
-  font-size: 18px;
-  color: var(--main-text-color);
-  text-align: center;
-  line-height: 23px;
+ text-align: normal;
 }
 
 .top__btns {
   padding-top: 40px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 .top__btns-chess {
-  padding: 20px 49px;
+  padding: 18px 43px;
   background: var(--black-color);
   border-radius: 66px;
   color: var(--white-text-color);

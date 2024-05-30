@@ -1,0 +1,61 @@
+@media (max-width: 375px) {
+      
+      .header__logo-img {
+        width: 213px;
+      }
+      
+      .top {
+        padding: 40px 0px 291px;
+      }
+      
+      .top__content {
+        width: 335px;
+      }
+      
+      .top__title {
+        font-size: 36px;
+        line-height: 39px;
+      }
+      
+      .top__capital {
+        padding-left: 63px;
+      }
+      
+      .top__world {
+        padding-left: 30px;
+      }
+      
+      .top__description {
+        font-size: 18px;
+        color: var(--main-text-color);
+        text-align: center;
+        line-height: 23px;
+      }
+      
+      .top__btns {
+        padding-top: 40px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .top__btns-chess {
+        padding: 20px 49px;
+        background: var(--black-color);
+        border-radius: 66px;
+        color: var(--white-text-color);
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 20px;
+      }
+      
+      .top__btns-tournament {
+        padding: 20px 49px;
+        border: 2px solid var(--black-color);
+        border-radius: 66px;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 20px;
+      }
+}
