@@ -496,7 +496,7 @@ textarea {
 .participants__container-title {
   font-family: var(--title-font);
   font-weight: 400;
-  font-size: clamp(30px, 3vw, 54px);
+  font-size: clamp(36px, 3vw, 54px);
   color: var(--main-text-color);
   line-height: 64px;
   text-transform: uppercase;
@@ -516,7 +516,7 @@ textarea {
 }
 
 .participants__numbers {
-  font-size: clamp(12px, 1.2vw, 16px);
+  font-size: 16px;
   color: var(--main-text-color);
   line-height: 19px;
 }
@@ -540,19 +540,19 @@ textarea {
 }
 
 .participants__background-img {
-  width: clamp(200px, 100%, 320px);
+  width: clamp(244px, 100%, 320px);
 }
 
 .participants__items-title {
   font-weight: 600;
-  font-size: clamp(12px, 1.5vw, 24px);
+  font-size: 24px;
   line-height: 28px;
   color: var(--main-text-color);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .participants__items-text {
-  font-size: clamp(12px, 1.3vw, 20px);
+  font-size: 20px;
   color: var(--main-text-color);
   margin-bottom: 20px;
 }
@@ -564,7 +564,7 @@ textarea {
 }
 
 .participants__btn-link {
-  font-size: clamp(12px, 1.1vw, 16px);
+  font-size: 16px;
   font-weight: 500;
   line-height: 19px;
   color: var(--blue-text-color);
@@ -575,20 +575,18 @@ textarea {
 }
 
 .footer__line {
-  bottom: -60px;
-  width: clamp(500px, 100%, 2335px);
+  width: clamp(1727px, 100%, 2335px);
   padding: 18px 12px;
   background: var(--red-color);
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 12px;
-  z-index: 1000;
 }
 
 .footer__line-item {
   font-family: var(--title-font);
-  font-size: clamp(16px, 1.3vw, 22px);
+  font-size: clamp(16px, 1.1vw, 22px);
   font-weight: 400;
   color: var(--white-text-color);
   margin-left: 12px;
@@ -604,7 +602,7 @@ textarea {
 }
 
 .footer__container-description {
-  font-size: clamp(12px, 1.1vw, 16px);
+  font-size: 16px;
   line-height: 19px;
   color: var(--main-text-color);
 }
