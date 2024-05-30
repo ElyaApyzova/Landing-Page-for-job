@@ -394,25 +394,27 @@ textarea {
 }
 
 .stages__content {
-  width: clamp(400px, 100%, 806px);
+  width: clamp(335px, 100%, 806px);
 }
+
 
 .stages__title {
   font-family: var(--title-font);
   font-weight: 400;
-  font-size: clamp(20px, 4vw, 54px);
+  font-size: clamp(36px, 3.2vw, 54px);
   color: var(--main-text-color);
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 64px;
   margin-bottom: 54px;
 }
 
 .stages__text {
-  font-size: clamp(12px, 1.2vw, 20px);
+  display: inline-block; 
+  width: 280px;
+  line-height: normal;
+  font-size: clamp(18px, 1.2vw, 20px);
   color: var(--blue-text-color);
   text-transform: capitalize;
-  line-height: 1.2;
-  align-self: center;
 }
 
 .stages__list {
