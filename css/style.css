@@ -360,7 +360,7 @@ textarea {
 
 .advertisement__item-text {
   padding: 14px 16px;
-  width: 350px;
+  width: 400px;
   font-size: 20px;
   font-weight: 600;
   color: var(--main-text-color); 
@@ -429,19 +429,18 @@ textarea {
 
 
 
-.stages__item:nth-child(1) { grid-area: item1; width: clamp(200px, 100%,394px); height: 112px; }
-.stages__item:nth-child(2) { grid-area: item2; width: clamp(200px, 100%,394px); height: 112px; }
-.stages__item:nth-child(3) { grid-area: item3; width: clamp(200px, 100%,394px); height: 244px; }
-.stages__item:nth-child(4) { grid-area: item4; width: clamp(200px, 100%,394px); height: 112px; }
-.stages__item:nth-child(5) { grid-area: item5; width: clamp(200px, 100%,394px); height: 112px; }
-.stages__item:nth-child(6) { grid-area: item6; width: clamp(200px, 100%,394px); height: 136px; }
-.stages__item:nth-child(7) { grid-area: item7; width: clamp(200px, 100%,808px); height: 136px; padding-right: 270px; }
+.stages__item:nth-child(1) { grid-area: item1; width: clamp(335px, 100%,394px); height: 112px; }
+.stages__item:nth-child(2) { grid-area: item2; width: clamp(335px, 100%,394px); height: 112px; }
+.stages__item:nth-child(3) { grid-area: item3; width: clamp(335px, 100%,394px); height: 244px; }
+.stages__item:nth-child(4) { grid-area: item4; width: clamp(335px, 100%,394px); height: 112px; }
+.stages__item:nth-child(5) { grid-area: item5; width: clamp(335px, 100%,394px); height: 112px; }
+.stages__item:nth-child(6) { grid-area: item6; width: clamp(335px, 100%,394px); height: 136px; }
+.stages__item:nth-child(7) { grid-area: item7; width: clamp(335px, 100%,808px); height: 136px; padding-right: 270px; }
 
 
 .stages__item {
   position: relative;
   background-image: url(../images/stages.back.png), url(../images/stamp.png);
-  background-color: #E9DED4;
   background-blend-mode: color-burn;
   padding: 20px;
   display: flex;
@@ -451,24 +450,22 @@ textarea {
 
 .stages__box-number {
   background: #FFFFFF;
-  border-radius: 66px;
+  border-radius: 60px;
   width: 36px;
   height: 36px;
-  align-self: stretch;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   color: var(--main-text-color);
   font-weight: 600;
-  font-size: clamp(12px, 1.3vw, 20px);
+  font-size: 20px;
 }
 
 .stages__description {
   color: var(--main-text-color);
   font-weight: 500;
-  font-size: clamp(12px, 1.4vw, 20px);
-  line-height: 24px;
+  font-size: clamp(18px, 1.4vw, 20px);
 }
 
 .stages__container{
@@ -478,7 +475,7 @@ textarea {
 }
 
 .stages__container-img {
-  width: clamp(150px, 100%, 377px);
+  width: clamp(318px, 100%, 377px);
 }
 
 
