@@ -44,6 +44,7 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+  background: none;
 }
 
 img {
@@ -88,7 +89,7 @@ textarea {
 }
 
 .top__content {
-  width: clamp(335px, 100%,542px);
+  width: 542px;
 }
 
 .top__title {
@@ -105,21 +106,31 @@ textarea {
   padding-left: 91px;
 }
 
-
+.top__world {
+  padding-left: 30px;
+}
 
 .top__description {
- text-align: normal;
+  font-size: 18px;
+  color: var(--main-text-color);
+  text-align: center;
+  line-height: 23px;
 }
 
 .top__btns {
-  padding-top: 40px;
+  margin-top: 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
 }
+
+.top__btns-chess,
+.top__btns-tournament {
+  min-width: 263px;
+  padding: 20px 49px;
+}
+
 .top__btns-chess {
-  padding: 18px 43px;
   background: var(--black-color);
   border-radius: 66px;
   color: var(--white-text-color);
@@ -130,7 +141,6 @@ textarea {
 }
 
 .top__btns-tournament {
-  padding: 20px 49px;
   border: 2px solid var(--black-color);
   border-radius: 66px;
   font-size: 16px;
