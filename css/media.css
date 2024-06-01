@@ -85,4 +85,166 @@
         list-style: initial;
         line-height: 17px;
       } 
+
+
+
+
+     
+.advertisement {
+  padding: 48px 0px 60px;
+}
+
+
+
+.advertisement__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 34px;
+}
+
+.advertisement__main-title {
+  font-size: 28px;
+  line-height: 37px;
+}
+
+
+.advertisement__main-img {
+  width: 335;
+  height: 212px;
+  border-radius: 74px;
+}
+
+.advertisement__box {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ gap: 24px;
+}
+
+
+
+
+.advertisement__background-img {
+  width: 335px;
+} 
+
+.advertisement__content-title {
+  font-size: 28px;
+  line-height: 37px;
+  margin-bottom: 44px;
+}
+
+
+
+.advertisement__list {
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  
+}
+
+
+
+.advertisement__item-description:not(:last-child) {
+  border-bottom: none;
+} 
+
+.advertisement__item-divider {
+  display: none;
+}
+
+.advertisement__item-text {
+  width: 335px;
+}
+
+.advertisement__item-text:not(:last-child) {
+  border-bottom: 2px solid #D0D0D0;
+} 
+
+
+
+.advertisement__item-info {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+
+
+
+
+
+.stages {
+  padding: 60px 0px;
+}
+
+.stages__content {
+  width: 335px;
+}
+
+
+.stages__title {
+  font-size: 36px;
+  line-height: 39px;
+  margin-bottom: 148px;
+}
+
+.stages__text { 
+  margin-top: 12px;
+  width: 335px;
+ line-height: 21px;
+  font-size: 18px;
+}
+
+.stages__list {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+.stages__item {
+  width: 335px;
+  height: 300px;
+  position: relative;
+  background-image: url(../images/stages.back.png), url(../images/stamp.png);
+  background-blend-mode: color-burn;
+  padding: 62px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center; 
+}
+
+.stages__box-number {
+  background: #FFFFFF;
+  border-radius: 60px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: var(--main-text-color);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.stages__description {
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: clamp(18px, 1.4vw, 20px);
+}
+
+.stages__container{
+  position: absolute;
+  right: 0;
+  bottom: -340%;
+}
+
+.stages__container-img {
+  width: clamp(318px, 100%, 377px);
+}
 }
