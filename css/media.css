@@ -265,6 +265,29 @@
 }
 
 
+.stages__carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.stages__container-img {
+  width: 36px;
+  height: 36px;
+}
+
+.stages__dots {
+  display: flex;
+  gap: 6px;
+}
+
+.stages__dots-grey {
+  width: 10px;
+  height: 10px;
+}
+
 
 
 
