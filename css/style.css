@@ -485,7 +485,9 @@ textarea {
   width: clamp(318px, 100%, 377px);
 }
 
-
+.stages__carousel {
+  display: none;
+}
 
 
 
