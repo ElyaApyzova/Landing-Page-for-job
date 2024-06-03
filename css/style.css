@@ -216,7 +216,7 @@ textarea {
 
 @keyframes marquee {
   0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  100% { transform: translateX(-50%); }
 }
 
 .list__line {
@@ -236,8 +236,9 @@ textarea {
   font-weight: 400;
   color: var(--white-text-color);
   list-style: initial;
+  margin-left: 12px;
   text-transform: uppercase;
-  animation: marquee 30s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 
 
