@@ -6,7 +6,7 @@
     background-color: #E9DED4;
     background-blend-mode: color-burn;
     display: flex;
-    flex-direction: column-reverse; /* this will move the image to the bottom */
+    flex-direction: column-reverse; 
   }
   
   .wrapper::before {

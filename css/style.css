@@ -214,6 +214,11 @@ textarea {
   width: 82px;
 }
 
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
 .list__line {
   width: clamp(1727px, 100%, 2335px);
   padding: 18px 0px;
@@ -222,6 +227,7 @@ textarea {
   align-items: center;
   gap: 12px;
   overflow-x: hidden;
+  
 }
 
 .item__line {
@@ -231,11 +237,8 @@ textarea {
   color: var(--white-text-color);
   list-style: initial;
   text-transform: uppercase;
-  margin-left: 12px;
+  animation: marquee 30s linear infinite;
 }
-
-
-
 
 
 .advertisement {
