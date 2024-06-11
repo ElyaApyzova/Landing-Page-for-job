@@ -232,26 +232,35 @@ textarea {
 .list__line {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   
 }
 
 .item__line {
-  list-style: initial;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   color: var(--white-text-color);
   white-space: nowrap;
   text-transform: uppercase;
   animation: marquee 10s linear infinite;
 }
 
+.item__line-img {
+  width: 6px;
+  height: 6px;
+}
+
 .item__description {
   font-family: var(--title-font);
-  font-size: clamp(12px, 1.2vw, 22px);
+  font-size: clamp(12px, 1.4vw, 22px);
   font-weight: 400;
-  margin-left: 12px;
   color: var(--white-text-color);
   
 }
+
+
+
 
 .advertisement {
   padding: 80px 0px 100px;
