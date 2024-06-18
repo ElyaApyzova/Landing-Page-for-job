@@ -39,7 +39,7 @@ function handleSlide(direction) {
   clearInterval(window.slideTimer);
 
   // Set the direction of slide based on input
-  const increment = direction === 'next' ? 5 : -5;
+  const increment = direction === 'next' ? 3 : -3;
 
   // Start slide animation
   window.slideTimer = setInterval(() => {
@@ -70,7 +70,7 @@ function autoplay() {
   ) {
     prodItems.scrollLeft = 0;
   } else {
-    prodItems.scrollLeft += 1;
+    prodItems.scrollLeft += 3;
   }
 }
 

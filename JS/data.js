@@ -3,7 +3,7 @@ const data = [
         image: "images/participant's img.png",
         title: "Хозе-Рауль Капабланка",
         description: "Чемпион мира по шахматам",
-        btn: "$Подробнее",
+        btn: "Подробнее",
     },
     {
         image: "images/participant's img.png",
