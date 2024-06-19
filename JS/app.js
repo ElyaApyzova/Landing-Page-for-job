@@ -11,22 +11,14 @@ function createProductElement(prodDetails) {
   const { image, title, description, btn } = prodDetails;
   const productItem = document.createElement('div');
   productItem.classList.add('prod-item');
-  productItem.innerHTML = `
-        <div class="img-cont">
-          <img src="${image}" />
-        </div>
-        <h3 class="item-name">${title}</h3>
-        <p class="size"><b>EU Size:</b> ${description}</p>
-        <p class="price"><b>Price:</b> ${price}</p>
-        <a class="addCart" href="#">Подробнее</a>
-        `;
+  productItem.innerHTML = 
         `<div class="participants__box">
         <div class="participants__items">
         <div class="participants__background">
-          <img class="participants__background-img" src="./images/participant's img.png" alt="" />
+          <img class="participants__background-img" src="${image}" alt="" />
         </div>
-        <h6 class="participants__items-title">Хозе-Рауль Капабланка</h6>
-        <p class="participants__items-text">Чемпион мира по шахматам</p>
+        <h6 class="participants__items-title">${title}</h6>
+        <p class="participants__items-text">${description}</p>
         <div class="participants__btn">
          <a class="participants__btn-link" href="#">Подробнее</a>
         </div>
