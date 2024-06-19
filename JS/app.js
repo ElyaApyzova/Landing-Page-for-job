@@ -1,72 +1,64 @@
-
-
 // Constants variables - DOM elements
-const prodItems = document.querySelector('.participants__box');
-const prevBtn = document.querySelector('.participants__arrows-btn');
-const nextBtn = document.querySelector('.participants__arrows-btn');
-// Declare slideTimer variable globally for better control
+const prodItems = document.querySelector(".participants__box");
+const prevBtn = document.querySelector(
+  ".participants__arrows-btn:first-of-type"
+);
+const nextBtn = document.querySelector(
+  ".participants__arrows-btn:last-of-type"
+);
 let slideTimer;
 
 function createProductElement(prodDetails) {
   const { image, title, description } = prodDetails;
-  const productItem = document.createElement('div');
-  productItem.classList.add('participants__box');
-  productItem.innerHTML = 
-        `<div class="participants__box">
-        <div class="participants__items">
-        <div class="participants__background">
-          <img class="participants__background-img" src="${image}" alt="" />
-        </div>
-        <h6 class="participants__items-title">${title}</h6>
-        <p class="participants__items-text">${description}</p>
-        <div class="participants__btn">
-         <a class="participants__btn-link" href="#">Подробнее</a>
-        </div>
-        </div>
-        </div>`;
+  const productItem = document.createElement("div");
+  productItem.classList.add("participants__items");
+  productItem.innerHTML = `
+    <div class="participants__background">
+      <img class="participants__background-img" src="${image}" alt="" />
+    </div>
+    <h6 class="participants__items-title">${title}</h6>
+    <p class="participants__items-text">${description}</p>
+    <div class="participants__btn">
+      <a class="participants__btn-link" href="#">Подробнее</a>
+    </div>
+  `;
   return productItem;
 }
 
-function displayProducts(items = data) {
-  prodItems.innerHTML = '';
-  items.forEach(item => {
+function displayProducts(items) {
+  prodItems.innerHTML = "";
+  items.forEach((item) => {
     const productItem = createProductElement(item);
     prodItems.appendChild(productItem);
   });
 }
 
-displayProducts();
+displayProducts(data);
 
-// Function to handle slide animation
 function handleSlide(direction) {
-  // Clear any existing slide timer
-  clearInterval(window.slideTimer);
+  clearInterval(slideTimer);
+  const increment = direction === "next" ? 5 : -5;
 
-  // Set the direction of slide based on input
-  const increment = direction === 'next' ? 3 : -3;
-
-  // Start slide animation
-  window.slideTimer = setInterval(() => {
-    // Update scrollLeft based on direction
+  slideTimer = setInterval(() => {
     prodItems.scrollLeft += increment;
-    if (prodItems.scrollLeft % 100 === 0) {
-      // Use window.slideTimer to clear the interval
-      clearInterval(window.slideTimer);
+    if (
+      prodItems.scrollLeft % 100 === 0 ||
+      prodItems.scrollLeft <= 0 ||
+      prodItems.scrollLeft >= prodItems.scrollWidth - prodItems.clientWidth
+    ) {
+      clearInterval(slideTimer);
     }
   }, 15);
 }
 
-// Previous button scroll event (Scrolling to Left)
-prevBtn.addEventListener('click', () => {
-  handleSlide('prev'); // Call handleSlide with 'prev' direction
+prevBtn.addEventListener("click", () => {
+  handleSlide("prev");
 });
 
-// Next button scroll event (Scrolling to Right)
-nextBtn.addEventListener('click', () => {
-  handleSlide('next'); // Call handleSlide with 'next' direction
+nextBtn.addEventListener("click", () => {
+  handleSlide("next");
 });
 
-// Autoplay function
 function autoplay() {
   if (
     prodItems.scrollLeft >=
@@ -80,14 +72,10 @@ function autoplay() {
 
 let play = setInterval(autoplay, 15);
 
-// Pause slide when hover
-prodItems.addEventListener('mouseover', () => {
+prodItems.addEventListener("mouseover", () => {
   clearInterval(play);
 });
 
-
-
-// Resume slide after pause
-prodItems.addEventListener('mouseout', () => {
+prodItems.addEventListener("mouseout", () => {
   play = setInterval(autoplay, 15);
 });
