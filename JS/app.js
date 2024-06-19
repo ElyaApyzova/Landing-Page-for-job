@@ -1,16 +1,16 @@
 
 
 // Constants variables - DOM elements
-const prodItems = document.querySelector('.prod-items');
+const prodItems = document.querySelector('.participants__box');
 const prevBtn = document.querySelector('.participants__arrows-btn');
 const nextBtn = document.querySelector('.participants__arrows-btn');
 // Declare slideTimer variable globally for better control
 let slideTimer;
 
 function createProductElement(prodDetails) {
-  const { image, title, description, btn } = prodDetails;
+  const { image, title, description } = prodDetails;
   const productItem = document.createElement('div');
-  productItem.classList.add('prod-item');
+  productItem.classList.add('participants__box');
   productItem.innerHTML = 
         `<div class="participants__box">
         <div class="participants__items">
