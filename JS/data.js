@@ -30,3 +30,4 @@ const data = [
     description: "Гроссмейстер",
   },
 ];
+ 
