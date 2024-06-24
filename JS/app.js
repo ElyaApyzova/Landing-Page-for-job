@@ -3,7 +3,7 @@ class Slider {
     this.active = 0;
     this.data = data;
     document
-      .querySelectorAll(".slider__btn-switch[data-type]")
+      .querySelectorAll(".participants__arrows-btn[data-type]")
       .forEach((btn) => {
         btn.onclick = () => this.handleClick(btn.dataset.type);
       });
@@ -14,25 +14,22 @@ class Slider {
     const { image, title, description } = this.data[this.active];
 
     const sliderContent = `
-      <img class="slider__img" src="${image}" alt="${title}" />
-      <div class="slider__context flex-column">
-        <h3 class="slider__category">${title}</h3>
-        <strong class="slider__title">${description}</strong>
-      </div>
+      <img class="participants__background-img" src="${image}" alt="" />
+      <h6 class="participants__items-title">${title}</h6>
+      <p class="participants__items-text">${description}</p>
     `;
     const sliderIndex = `
       <span>${this.active < 9 ? "0" + (this.active + 1) : this.active + 1}</span>
-      <span>${this.items.length < 10 ? "0" + this.items.length : this.items.length}</span>
+      <span>${this.data.length < 10 ? "" + this.data.length : this.data.length}</span>
     `;
 
-    document.querySelector(".slider__content").innerHTML = sliderContent;
-    document.querySelector(".slider__index").innerHTML = sliderIndex;
-    document.querySelector(".slider").style.backgroundColor = bgColor;
+    document.querySelector(".participants__items").innerHTML = sliderContent;
+    document.querySelector(".participants__numbers").innerHTML = sliderIndex;
   }
 
   basicAnimation(dir, delay) {
-    const sliderImg = document.querySelector(".slider__img");
-    const sliderContext = document.querySelectorAll(".slider__context *");
+    const sliderImg = document.querySelector(".participants__background-img");
+    const sliderContext = sliderImg.children;
 
     sliderImg.style.transition = "transform 1s ease, opacity 1s ease";
     sliderImg.style.transform = `translateX(${150 * dir}px)`;
@@ -58,13 +55,13 @@ class Slider {
   handleClick(type) {
     const dir = type === "next" ? 1 : -1;
 
-    const sliderImg = document.querySelector(".slider__img");
-    const sliderContext = document.querySelectorAll(".slider__context *");
+    const sliderImg = document.querySelector(".participants__items");
 
     sliderImg.style.transition = "transform 1s ease, opacity 1s ease";
     sliderImg.style.transform = `translateX(${-250 * dir}px)`;
     sliderImg.style.opacity = 0;
 
+    const sliderContext = sliderImg.children;
     sliderContext.forEach((el) => {
       el.style.transition = "transform 0.7s ease, opacity 0.7s ease";
       el.style.transform = `translateX(${-100 * dir}px)`;
@@ -73,39 +70,17 @@ class Slider {
 
     setTimeout(() => {
       if (type === "next") {
-        this.active = this.active === this.data.length - 1 ? 0 : this.active + 1;
+        this.active = this.active === this.data.length - 3 ? 0 : this.active + 3;
       } else {
-        this.active = this.active <= 0 ? this.data.length - 1 : this.active - 1;
+        this.active = this.active <= 0 ? this.data.length - 3 : this.active - 3;
       }
 
       this.renderItem();
-      this.basicAnimation(dir, 0);
+      this.basicAnimation(dir, 0.5);
     }, 1000);
   }
 }
 
-const items = [
-  {
-    img: "image1.jpg",
-    category: "Category 1",
-    title: "Title 1",
-    price: "$10",
-    bgColor: "#ff0000",
-  },
-  {
-    img: "image2.jpg",
-    category: "Category 2",
-    title: "Title 2",
-    price: "$20",
-    bgColor: "#00ff00",
-  },
-  {
-    img: "image3.jpg",
-    category: "Category 3",
-    title: "Title 3",
-    price: "$30",
-    bgColor: "#0000ff",
-  },
-];
+
 
 const slider = new Slider(data);
