@@ -14,13 +14,19 @@ class Slider {
     const { image, title, description } = this.data[this.active];
 
     const sliderContent = `
+    <div class="participants__background">
       <img class="participants__background-img" src="${image}" alt="" />
+      </div>
       <h6 class="participants__items-title">${title}</h6>
       <p class="participants__items-text">${description}</p>
+        <div class="participants__btn">
+         <a class="participants__btn-link" href="#">Подробнее</a>
+        </div>
     `;
     const sliderIndex = `
-      <span>${this.active < 9 ? "0" + (this.active + 1) : this.active + 1}</span>
-      <span>${this.data.length < 10 ? "" + this.data.length : this.data.length}</span>
+      <span class="participants__numbers">${this.active < 9 ? "0" + (this.active + 3) : this.active + 3}</span>
+      <span>/</span>
+      <span  class="participants__numbers">${this.data.length < 10 ? "" + this.data.length : this.data.length}</span>
     `;
 
     document.querySelector(".participants__items").innerHTML = sliderContent;
@@ -53,9 +59,9 @@ class Slider {
   }
 
   handleClick(type) {
-    const dir = type === "next" ? 1 : -1;
+    const dir = type === "prev" ? 3 : -3;
 
-    const sliderImg = document.querySelector(".participants__items");
+    const sliderImg = document.querySelector(".participants__box");
 
     sliderImg.style.transition = "transform 1s ease, opacity 1s ease";
     sliderImg.style.transform = `translateX(${-250 * dir}px)`;
@@ -72,7 +78,7 @@ class Slider {
       if (type === "next") {
         this.active = this.active === this.data.length - 3 ? 0 : this.active + 3;
       } else {
-        this.active = this.active <= 0 ? this.data.length - 3 : this.active - 3;
+        this.active = this.active <= 3 ? this.data.length - 3 : this.active - 3;
       }
 
       this.renderItem();
@@ -84,3 +90,4 @@ class Slider {
 
 
 const slider = new Slider(data);
+
