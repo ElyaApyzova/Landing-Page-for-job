@@ -1,7 +1,7 @@
 class Slider {
-  constructor(items) {
+  constructor(data) {
     this.active = 0;
-    this.items = items;
+    this.data = data;
     document
       .querySelectorAll(".slider__btn-switch[data-type]")
       .forEach((btn) => {
@@ -11,14 +11,13 @@ class Slider {
   }
 
   renderItem() {
-    const { img, category, title, price, bgColor } = this.items[this.active];
+    const { image, title, description } = this.data[this.active];
 
     const sliderContent = `
-      <img class="slider__img" src="${img}" alt="${title}" />
+      <img class="slider__img" src="${image}" alt="${title}" />
       <div class="slider__context flex-column">
-        <h3 class="slider__category">${category}</h3>
-        <strong class="slider__title">${title}</strong>
-        <small class="slider__price">${price}</small>
+        <h3 class="slider__category">${title}</h3>
+        <strong class="slider__title">${description}</strong>
       </div>
     `;
     const sliderIndex = `
@@ -74,9 +73,9 @@ class Slider {
 
     setTimeout(() => {
       if (type === "next") {
-        this.active = this.active === this.items.length - 1 ? 0 : this.active + 1;
+        this.active = this.active === this.data.length - 1 ? 0 : this.active + 1;
       } else {
-        this.active = this.active <= 0 ? this.items.length - 1 : this.active - 1;
+        this.active = this.active <= 0 ? this.data.length - 1 : this.active - 1;
       }
 
       this.renderItem();
@@ -109,4 +108,4 @@ const items = [
   },
 ];
 
-const slider = new Slider(items);
+const slider = new Slider(data);
