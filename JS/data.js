@@ -1,4 +1,4 @@
-const data = [
+const participants = [
   {
     image: "images/participant's img.png",
     title: "Хозе-Рауль Капабланка",
