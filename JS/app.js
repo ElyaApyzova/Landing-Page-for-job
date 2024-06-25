@@ -11,22 +11,26 @@ class Slider {
   }
 
   renderItem() {
-    const { image, title, description } = this.data[this.active];
-
-    const sliderContent = `
-    <div class="participants__background">
-      <img class="participants__background-img" src="${image}" alt="" />
-      </div>
-      <h6 class="participants__items-title">${title}</h6>
-      <p class="participants__items-text">${description}</p>
-        <div class="participants__btn">
-         <a class="participants__btn-link" href="#">Подробнее</a>
+    const sliderContent = this.data.map((item, index) => {
+      const { image, title, description } = item;
+      return `
+        <div class="participants__box ${index >= this.active && index < this.active + 3 ? 'active' : ''}">
+          <div class="participants__background">
+            <img class="participants__background-img" src="${image}" alt="" />
+          </div>
+          <h6 class="participants__items-title">${title}</h6>
+          <p class="participants__items-text">${description}</p>
+          <div class="participants__btn">
+            <a class="participants__btn-link" href="#">Подробнее</a>
+          </div>
         </div>
-    `;
+      `;
+    }).join('');
+
     const sliderIndex = `
       <span class="participants__numbers">${this.active < 9 ? "0" + (this.active + 3) : this.active + 3}</span>
       <span>/</span>
-      <span  class="participants__numbers">${this.data.length < 10 ? "" + this.data.length : this.data.length}</span>
+      <span class="participants__numbers">${this.data.length < 10 ? "" + this.data.length : this.data.length}</span>
     `;
 
     document.querySelector(".participants__items").innerHTML = sliderContent;
@@ -59,31 +63,10 @@ class Slider {
   }
 
   handleClick(type) {
-    const dir = type === "prev" ? 3 : -3;
-
-    const sliderImg = document.querySelector(".participants__box");
-
-    sliderImg.style.transition = "transform 1s ease, opacity 1s ease";
-    sliderImg.style.transform = `translateX(${-250 * dir}px)`;
-    sliderImg.style.opacity = 0;
-
-    const sliderContext = sliderImg.children;
-    sliderContext.forEach((el) => {
-      el.style.transition = "transform 0.7s ease, opacity 0.7s ease";
-      el.style.transform = `translateX(${-100 * dir}px)`;
-      el.style.opacity = 0;
-    });
-
-    setTimeout(() => {
-      if (type === "next") {
-        this.active = this.active === this.data.length - 3 ? 0 : this.active + 3;
-      } else {
-        this.active = this.active <= 3 ? this.data.length - 3 : this.active - 3;
-      }
-
-      this.renderItem();
-      this.basicAnimation(dir, 0.5);
-    }, 1000);
+    const dir = type === "prev" ? 1 : -1;
+    this.active = (this.active + dir + this.data.length) % this.data.length;
+    this.renderItem();
+    this.basicAnimation(dir, 0.5);
   }
 }
 
